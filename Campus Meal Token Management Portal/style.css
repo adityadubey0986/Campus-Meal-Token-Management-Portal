@@ -1,0 +1,786 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #24313b;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1120px;
+    margin: auto;
+}
+
+.topbar {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0 2px 14px #1d263010;
+}
+
+.nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 75px;
+    gap: 20px;
+}
+
+.brand {
+    font-size: 26px;
+    font-weight: 800;
+    color: #142d35;
+}
+
+.brand span:last-child {
+    color: #ed7435;
+}
+
+.brand-icon {
+    font-size: 25px;
+}
+
+.topbar nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.topbar nav a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #43515a;
+}
+
+.topbar nav a:hover,.text-link {
+    color: #e66b2d;
+}
+
+.hero {
+    background: linear-gradient(100deg,rgba(9,33,40,.94),rgba(9,33,40,.75)),url("https://uploads.sarvgyan.com/2025/01/LPU-Jalandhar.jpeg") center/cover;
+    min-height: 485px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-content {
+    padding: 65px 0;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: #ffc28b;
+}
+
+.eyebrow.orange {
+    color: #df7035;
+}
+
+.hero h1 {
+    font-size: clamp(42px,6vw,68px);
+    line-height: 1.08;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: #ffac69;
+}
+
+.hero p {
+    max-width: 530px;
+    color: #e6eceb;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.btn {
+    border: 0;
+    display: inline-block;
+    padding: 14px 23px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.primary {
+    background: #ed7736;
+    color: white;
+}
+
+.primary:hover {
+    background: #d65e20;
+}
+
+.outline {
+    border: 1px solid #ffffffb5;
+    color: white;
+}
+
+.outline:hover {
+    background: #ffffff24;
+}
+
+.hero-facts {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    margin-top: 33px;
+    color: #e6eceb;
+}
+
+.info-strip {
+    background: #f9f4ee;
+    border-bottom: 1px solid #f1e9df;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 24px 0;
+    gap: 20px;
+}
+
+.info-grid div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-grid strong {
+    font-size: 16px;
+}
+
+.info-grid small {
+    color: #7d8388;
+}
+
+.section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.section h2,.campus-section h2 {
+    font-size: clamp(27px,3vw,37px);
+    margin: 12px 0;
+    color: #18343b;
+}
+
+.section p,.campus-section p {
+    color: #67747b;
+    line-height: 1.7;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.food-card {
+    border: 1px solid #edf0f0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 6px 22px #182f3710;
+    transition: transform .2s;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-picture {
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 73px;
+}
+
+.pic-one {
+    background: #f9e3c8;
+}
+
+.pic-two {
+    background: #e4ebd4;
+}
+
+.pic-three {
+    background: #f9e1d9;
+}
+
+.pic-four {
+    background: #e4e8ef;
+}
+
+.pic-five {
+    background: #f5e9c9;
+}
+
+.pic-six {
+    background: #e5f0e5;
+}
+
+.food-body {
+    padding: 20px;
+}
+
+.tag {
+    font-size: 11px;
+    background: #fff1e7;
+    color: #b65728;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-weight: bold;
+}
+
+.food-body h3 {
+    margin: 16px 0 6px;
+}
+
+.food-body p {
+    font-size: 13px;
+    margin: 0 0 19px;
+}
+
+.food-bottom {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+    font-size: 13px;
+}
+
+.food-bottom strong {
+    color: #dd6a2f;
+}
+
+.food-bottom small {
+    color: #8b8b8b;
+    font-weight: normal;
+}
+
+.food-bottom>span {
+    color: #78868c;
+}
+
+.campus-section {
+    background: #f7f9f8;
+    padding: 68px 0;
+}
+
+.campus-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.campus-grid p {
+    margin-bottom: 25px;
+}
+
+.campus-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.campus-photos img {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #e5e9e8;
+}
+
+.campus-photos p {
+    grid-column: 1/-1;
+    font-size: 11px;
+    margin: 0;
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 25px;
+}
+
+.booking-card,.how-card {
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 6px 26px #152b3512;
+    border: 1px solid #e8eded;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.form-grid input,.form-grid select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d9e0e2;
+    border-radius: 7px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.form-grid input:focus,.form-grid select:focus {
+    outline: 2px solid #f6b489;
+    border-color: #f6b489;
+}
+
+.total-box {
+    margin-top: 23px;
+    background: #f9f4ee;
+    border-radius: 8px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.total-box span {
+    font-size: 13px;
+    color: #65747a;
+}
+
+.total-box strong {
+    color: #d7612c;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 18px;
+}
+
+.how-card {
+    background: #15353c;
+    color: white;
+}
+
+.how-icon {
+    font-size: 36px;
+}
+
+.how-card h3 {
+    font-size: 25px;
+}
+
+.how-card ol {
+    padding-left: 22px;
+}
+
+.how-card li {
+    margin: 25px 0;
+}
+
+.how-card p {
+    font-size: 13px;
+    color: #c4d1d2;
+    margin: 6px 0;
+}
+
+.demo-note {
+    background: #ffffff17;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.tokens-section {
+    background: #f8faf9;
+}
+
+.token-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.token {
+    background: white;
+    border: 1px solid #e2e9e9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 12px #00000008;
+}
+
+.token h3 {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+.token p {
+    font-size: 13px;
+    margin: 7px 0;
+}
+
+.cancel-button {
+    background: #fff0ed;
+    border: 1px solid #f0b6a6;
+    color: #b94024;
+    border-radius: 7px;
+    padding: 10px 14px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.about {
+    max-width: 900px;
+    text-align: center;
+}
+
+footer {
+    background: #142f37;
+    color: #e7eeee;
+}
+
+.footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 0;
+    font-size: 12px;
+    flex-wrap: wrap;
+}
+
+footer strong {
+    font-size: 21px;
+}
+
+#message {
+    color: #167d48;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+@media(max-width:800px) {
+    .nav-row {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .topbar nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .campus-grid,.booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+}
+@media(max-width:540px) {
+    .menu-grid,.info-grid,.form-grid,.token-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .hero-facts {
+        gap: 12px;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .campus-photos img {
+        height: 155px;
+    }
+
+    .booking-card,.how-card {
+        padding: 20px;
+    }
+}
+.menu-tools {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+#menuSearch {
+    border: 1px solid #d9e0e2;
+    border-radius: 9px;
+    padding: 13px 16px;
+    min-width: 240px;
+    flex: 1;
+    max-width: 380px;
+    font-size: 14px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+}
+
+.filter {
+    background: #fff;
+    border: 1px solid #e4d4c7;
+    padding: 11px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #745548;
+}
+
+.filter:hover,.filter.active {
+    background: #ed7736;
+    color: white;
+    border-color: #ed7736;
+}
+
+.order-button {
+    margin: 0 20px 20px;
+    width: calc(100% - 40px);
+    background: #15353c;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.order-button:hover {
+    background: #ed7736;
+}
+
+.count {
+    display: inline-block;
+    font-size: 15px;
+    background: #fce7d9;
+    color: #b6501f;
+    border-radius: 25px;
+    padding: 5px 12px;
+    vertical-align: middle;
+}
+
+.clear-button {
+    border: 1px solid #e2b0a4;
+    background: #fff5f1;
+    color: #b84328;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.clear-button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+#noFood {
+    padding: 20px;
+    background: #fff4e9;
+    border-radius: 8px;
+}
+
+button:focus-visible,a:focus-visible,input:focus-visible {
+    outline: 3px solid #f2a26e;
+    outline-offset: 2px;
+}
+
+@media(max-width:540px) {
+    .menu-tools {
+        align-items: stretch;
+    }
+
+    #menuSearch {
+        max-width: none;
+        min-width: 0;
+    }
+}
+.food-picture {
+    height: 180px;
+    overflow: hidden;
+}
+
+.food-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.food-message {
+    font-size: 16px;
+    color: #8e603d;
+    background: #fff6ec;
+    padding: 15px 20px;
+    border-left: 4px solid #ed7736;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.menu-quote {
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 34px !important;
+    color: #ae6a3e !important;
+}
+
+.order-eta {
+    background: #f1f8f5;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-top: 12px;
+    color: #28654e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ready-time {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 17px 0;
+    border-bottom: 1px solid #ffffff28;
+}
+
+.ready-time span {
+    color: #c4d1d2;
+    font-size: 13px;
+}
+
+.ready-time strong {
+    font-size: 25px;
+    color: #ffbc80;
+}
+
+.time-note {
+    margin-top: 20px !important;
+}
+
+.food-quote {
+    margin-top: 24px;
+    color: #ffe0bd;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.quote-section {
+    text-align: center;
+    padding: 85px 0;
+    background: linear-gradient(110deg,#102e34e8,#102e34cc),url("https://images.unsplash.com/photo-1543353071-873f17a7a088?w=1500&q=80") center/cover;
+    color: white;
+}
+
+.quote-section h2 {
+    font-size: clamp(30px,4vw,48px);
+    margin: 15px auto;
+    max-width: 700px;
+}
+
+.quote-section p {
+    font-size: 19px;
+    color: #f8d8bc;
+    margin-bottom: 30px;
+}
+
+/* Food quotes beside the booking form */
+.quotes-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.quote-symbol {
+    font-size: 40px;
+}
+
+.quotes-card h3 {
+    margin: 0;
+    color: #ffbd87;
+}
+
+.quotes-intro {
+    color: #e4eeee;
+}
+
+.quote-item {
+    padding: 13px 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.quote-item p {
+    margin: 0;
+    font-size: 18px;
+    font-style: italic;
+    color: #fff0dc;
+    line-height: 1.5;
+}
+
+.quotes-ending {
+    color: #ffbd87;
+    font-weight: bold;
+}

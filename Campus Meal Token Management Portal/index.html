@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   MealFlow | LPU Campus Canteen
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="topbar">
+   <div class="container nav-row">
+    <a class="brand" href="#home">
+     <span class="brand-icon">
+      🍽
+     </span>
+     Meal
+     <span>
+      Flow
+     </span>
+    </a>
+    <nav>
+     <a href="#home">
+      Home
+     </a>
+     <a href="#menu">
+      Menu
+     </a>
+     <a href="#booking">
+      Book Token
+     </a>
+     <a href="#tokens">
+      My Tokens
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main>
+   <section class="hero" id="home">
+    <div class="container hero-content">
+     <div class="eyebrow">
+      WELCOME TO LPU CAMPUS DINING
+     </div>
+     <h1>
+      Good food.
+      <br/>
+      <span>
+       Less waiting.
+      </span>
+     </h1>
+     <p>
+      Explore your campus favourites, check prices and reserve your meal token in just a few clicks.
+     </p>
+     <div class="hero-buttons">
+      <a class="btn primary" href="#menu">
+       Explore Menu &rarr;
+      </a>
+      <a class="btn outline" href="#booking">
+       Book a Token
+      </a>
+     </div>
+     <div class="hero-facts">
+      <span>
+       &checkmark; Easy booking
+      </span>
+      <span>
+       &checkmark; Clear pricing
+      </span>
+      <span>
+       &checkmark; Instant token
+      </span>
+     </div>
+    </div>
+   </section>
+   <section class="info-strip">
+    <div class="container info-grid">
+     <div>
+      <strong>
+       🕒 8 AM &ndash; 8 PM
+      </strong>
+      <small>
+       Canteen Timings
+      </small>
+     </div>
+     <div>
+      <strong>
+       🍲 6 Food Choices
+      </strong>
+      <small>
+       Half &amp; full plates
+      </small>
+     </div>
+     <div>
+      <strong>
+       🎟 Quick Tokens
+      </strong>
+      <small>
+       Book in your browser
+      </small>
+     </div>
+    </div>
+   </section>
+   <section class="section container" id="menu">
+    <div class="section-heading">
+     <div>
+      <span class="eyebrow orange">
+       OUR FOOD CORNER
+      </span>
+      <h2>
+       What's on the menu?
+      </h2>
+      <p>
+       Choose your favourite, place your order and enjoy every bite!
+      </p>
+     </div>
+     <a class="text-link" href="#booking">
+      Order from menu &rarr;
+     </a>
+    </div>
+    <div class="food-message">
+     &ldquo;Life is better with good food and great company.&rdquo;
+    </div>
+    <div class="menu-tools">
+     <input aria-label="Search menu" id="menuSearch" placeholder="🔎 Search food (e.g. Maggi)" type="search"/>
+     <div class="filter-buttons">
+      <button class="filter active" data-filter="all" type="button">
+       All
+      </button>
+      <button class="filter" data-filter="meal" type="button">
+       Meals
+      </button>
+      <button class="filter" data-filter="snack" type="button">
+       Snacks
+      </button>
+     </div>
+    </div>
+    <p hidden="" id="noFood">
+     No matching food found.
+    </p>
+    <div class="menu-grid">
+     <article class="food-card" data-category="meal" data-food="veg thali">
+      <div class="food-picture pic-one">
+       <img alt="Indian thali" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=700&amp;q=80"/>
+      </div>
+      <div class="food-body">
+       <span class="tag">
+        Popular
+       </span>
+       <h3>
+        Veg Thali
+       </h3>
+       <p>
+        A complete homestyle meal
+       </p>
+       <div class="food-bottom">
+        <strong>
+         ₹40
+         <small>
+          half
+         </small>
+         / ₹70
+         <small>
+          full
+         </small>
+        </strong>
+        <span>
+         15 min
+        </span>
+       </div>
+      </div>
+      <button class="order-button" data-item="Veg Thali" type="button">
+       Order Now &rarr;
+      </button>
+     </article>
+     <article class="food-card" data-category="meal" data-food="rajma rice">
+      <div class="food-picture pic-two">
+       <img alt="Rice dish" src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=700&amp;q=80"/>
+      </div>
+      <div class="food-body">
+       <span class="tag">
+        Comfort food
+       </span>
+       <h3>
+        Rajma Rice
+       </h3>
+       <p>
+        Classic rajma with steamed rice
+       </p>
+       <div class="food-bottom">
+        <strong>
+         ₹35
+         <small>
+          half
+         </small>
+         / ₹60
+         <small>
+          full
+         </small>
+        </strong>
+        <span>
+         12 min
+        </span>
+       </div>
+      </div>
+      <button class="order-button" data-item="Rajma Rice" type="button">
+       Order Now &rarr;
+      </button>
+     </article>
+     <article class="food-card" data-category="meal" data-food="chole bhature">
+      <div class="food-picture pic-three">
+       <img alt="Indian snack" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=700&amp;q=80"/>
+      </div>
+      <div class="food-body">
+       <span class="tag">
+        Student pick
+       </span>
+       <h3>
+        Chole Bhature
+       </h3>
+       <p>
+        Spiced chole and fluffy bhature
+       </p>
+       <div class="food-bottom">
+        <strong>
+         ₹40
+         <small>
+          half
+         </small>
+         / ₹65
+         <small>
+          full
+         </small>
+        </strong>
+        <span>
+         15 min
+        </span>
+       </div>
+      </div>
+      <button class="order-button" data-item="Chole Bhature" type="button">
+       Order Now &rarr;
+      </button>
+     </article>
+     <article class="food-card" data-category="meal" data-food="fried rice">
+      <div class="food-picture pic-four">
+       <img alt="Fried rice" src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=700&amp;q=80"/>
+      </div>
+      <div class="food-body">
+       <span class="tag">
+        Quick bite
+       </span>
+       <h3>
+        Fried Rice
+       </h3>
+       <p>
+        Fresh vegetable fried rice
+       </p>
+       <div class="food-bottom">
+        <strong>
+         ₹45
+         <small>
+          half
+         </small>
+         / ₹75
+         <small>
+          full
+         </small>
+        </strong>
+        <span>
+         10 min
+        </span>
+       </div>
+      </div>
+      <button class="order-button" data-item="Fried Rice" type="button">
+       Order Now &rarr;
+      </button>
+     </article>
+     <article class="food-card" data-category="snack" data-food="maggi">
+      <div class="food-picture pic-five">
+       <img alt="Noodles" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=700&amp;q=80"/>
+      </div>
+      <div class="food-body">
+       <span class="tag">
+        Budget friendly
+       </span>
+       <h3>
+        Maggi
+       </h3>
+       <p>
+        A warm snack between classes
+       </p>
+       <div class="food-bottom">
+        <strong>
+         ₹25
+         <small>
+          half
+         </small>
+         / ₹40
+         <small>
+          full
+         </small>
+        </strong>
+        <span>
+         8 min
+        </span>
+       </div>
+      </div>
+      <button class="order-button" data-item="Maggi" type="button">
+       Order Now &rarr;
+      </button>
+     </article>
+     <article class="food-card" data-category="snack" data-food="sandwich">
+      <div class="food-picture pic-six">
+       <img alt="Sandwich" src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=700&amp;q=80"/>
+      </div>
+      <div class="food-body">
+       <span class="tag">
+        Light meal
+       </span>
+       <h3>
+        Sandwich
+       </h3>
+       <p>
+        Simple, tasty and filling
+       </p>
+       <div class="food-bottom">
+        <strong>
+         ₹30
+         <small>
+          half
+         </small>
+         / ₹50
+         <small>
+          full
+         </small>
+        </strong>
+        <span>
+         10 min
+        </span>
+       </div>
+      </div>
+      <button class="order-button" data-item="Sandwich" type="button">
+       Order Now &rarr;
+      </button>
+     </article>
+    </div>
+    <p class="menu-quote">
+     &ldquo;From the first bite to the last, make every meal memorable.&rdquo;
+    </p>
+   </section>
+   <section class="campus-section">
+    <div class="container campus-grid">
+     <div>
+      <span class="eyebrow orange">
+       CAMPUS LIFE
+      </span>
+      <h2>
+       Made for busy days at LPU
+      </h2>
+      <p>
+       Between lectures, labs and activities, finding time for food can be difficult. A delicious break makes every busy day better. Fresh flavours, happy moments and less waiting!
+      </p>
+      <a class="btn primary" href="#booking">
+       Reserve Your Meal &rarr;
+      </a>
+     </div>
+     <div class="campus-photos">
+      <img alt="LPU campus" onerror="this.style.display='none'" src="https://uploads.sarvgyan.com/2025/01/LPU-Jalandhar.jpeg"/>
+      <img alt="LPU mess dining facility" onerror="this.style.display='none'" src="https://www.lpu.in/lpu-assets/images/residence/mess-facility.jpg"/>
+     </div>
+    </div>
+   </section>
+   <section class="section container" id="booking">
+    <div class="section-heading">
+     <div>
+      <span class="eyebrow orange">
+       FAST &amp; EASY
+      </span>
+      <h2>
+       Book your meal token
+      </h2>
+      <p>
+       Your next delicious meal is only a few clicks away.
+      </p>
+     </div>
+    </div>
+    <div class="booking-layout">
+     <form class="booking-card" id="bookingForm">
+      <div class="form-grid">
+       <div>
+        <label for="studentName">
+         Student Name
+        </label>
+        <input id="studentName" placeholder="Your full name" required="" type="text"/>
+       </div>
+       <div>
+        <label for="rollNumber">
+         Roll Number
+        </label>
+        <input id="rollNumber" placeholder="Your roll number" required="" type="text"/>
+       </div>
+       <div>
+        <label for="food">
+         Food Item
+        </label>
+        <select id="food" required="">
+         <option value="">
+          Choose your meal
+         </option>
+         <option>
+          Veg Thali
+         </option>
+         <option>
+          Rajma Rice
+         </option>
+         <option>
+          Chole Bhature
+         </option>
+         <option>
+          Fried Rice
+         </option>
+         <option>
+          Maggi
+         </option>
+         <option>
+          Sandwich
+         </option>
+        </select>
+       </div>
+       <div>
+        <label for="plate">
+         Plate Size
+        </label>
+        <select id="plate">
+         <option value="Half">
+          Half Plate
+         </option>
+         <option value="Full">
+          Full Plate
+         </option>
+        </select>
+       </div>
+       <div>
+        <label for="quantity">
+         Quantity
+        </label>
+        <input id="quantity" max="10" min="1" required="" type="number" value="1"/>
+       </div>
+      </div>
+      <div class="total-box">
+       <span>
+        Estimated total
+       </span>
+       <strong id="total">
+        Total Amount: ₹0
+       </strong>
+      </div>
+      <div class="order-eta">
+       ⏱️
+       <span id="formEta">
+        Select a food item to see preparation time.
+       </span>
+      </div>
+      <button class="btn primary submit-btn" type="submit">
+       Confirm Token Booking &rarr;
+      </button>
+      <p aria-live="polite" id="message">
+      </p>
+     </form>
+     <aside class="how-card quotes-card">
+      <div class="quote-symbol">🍽️</div>
+      <h3>Good Food, Good Mood!</h3>
+      <p class="quotes-intro">A little happiness in every bite.</p>
+      <div class="quote-item">
+       <p>“Great meals make great memories.”</p>
+      </div>
+      <div class="quote-item">
+       <p>“Your favourite food is just a few clicks away.”</p>
+      </div>
+      <div class="quote-item">
+       <p>“Eat well, feel good, and enjoy your day.”</p>
+      </div>
+      <div class="quote-item">
+       <p>“A tasty break makes a busy day better.”</p>
+      </div>
+      <p class="quotes-ending">Fresh choices. Happy moments. Every day.</p>
+     </aside>
+    </div>
+   </section>
+   <section class="section tokens-section" id="tokens">
+    <div class="container">
+     <span class="eyebrow orange">
+      YOUR BOOKINGS
+     </span>
+     <h2>
+      My meal tokens
+      <span class="count" id="tokenCount">
+       0
+      </span>
+     </h2>
+     <p>
+      View or cancel tokens for your orders.
+     </p>
+     <button class="clear-button" id="clearTokens" type="button">
+      Cancel All Tokens
+     </button>
+     <div class="token-grid" id="tokenList">
+     </div>
+    </div>
+   </section>
+   <section class="quote-section">
+    <div class="container">
+     <span class="eyebrow">
+      A LITTLE FOOD FOR THOUGHT
+     </span>
+     <h2>
+      Happiness is just one good meal away.
+     </h2>
+     <p>
+      &ldquo;Eat well, study well, live well.&rdquo;
+     </p>
+     <a class="btn primary" href="#menu">
+      Find Your Next Favourite &rarr;
+     </a>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div class="container footer-row">
+    <strong>
+     🍽 MealFlow
+    </strong>
+    <span>
+     Fresh food. Happy campus. Every day.
+    </span>
+    <a href="#home">
+     Back to top &uarr;
+    </a>
+   </div>
+  </footer>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
+
